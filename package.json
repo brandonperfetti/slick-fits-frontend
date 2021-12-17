@@ -77,9 +77,6 @@
       "./jest.setup.js"
     ]
   },
-  "engines": {
-    "node": "14.17.3"
-  },
   "//": "This is our babel config, I prefer this over a .babelrc file",
   "babel": {
     "env": {
