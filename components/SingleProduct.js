@@ -52,7 +52,7 @@ export default function SingleProduct({ id }) {
   return (
     <ProductStyles data-testid="singleProduct">
       <Head>
-        <title>Sick Fits | {Product.name}</title>
+        <title>Slick Fits | {Product.name}</title>
       </Head>
       <img
         src={Product.photo.image.publicUrlTransformed}

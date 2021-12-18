@@ -40,7 +40,7 @@ export default function SingleOrderPage({ query }) {
   return (
     <OrderStyles>
       <Head>
-        <title>Sick Fits = {order.id}</title>
+        <title>Slick Fits = {order.id}</title>
       </Head>
       <p>
         <span>Order Id:</span>
