@@ -24,7 +24,10 @@ export default function Product({ product }) {
       <p className="py-4 px-8 leading-8 flex-1">{product.description}</p>
       <div className="grid grid-cols-3 border-t border-gray-300 divide-x divide-gray-300">
         <RequireSignIn>
-          <button className="p-3 hover:bg-gray-100" type="button">
+          <button
+            className="p-3 hover:bg-gray-100 xs:text-xs sm:text-sm lg:text-lg xl:text-xl"
+            type="button"
+          >
             <Link
               href={{
                 pathname: '/update',
@@ -33,21 +36,11 @@ export default function Product({ product }) {
                 },
               }}
             >
-              <span className="xs:text-xs sm:text-sm lg:text-lg xl:text-xl">
-                Edit ✏️
-              </span>
+              Edit ✏️
             </Link>
           </button>
-          <button className="p-3 hover:bg-gray-100" type="button">
-            <span className="sm:text-xs lg:text-lg xl:text-xl">
-              <AddToCart id={product.id} />
-            </span>
-          </button>
-          <button className="p-3 hover:bg-gray-100" type="button">
-            <span className="sm:text-xs lg:text-lg xl:text-xl">
-              <DeleteProduct id={product.id}>Delete 🗑️</DeleteProduct>
-            </span>
-          </button>
+          <AddToCart id={product.id} />
+          <DeleteProduct id={product.id}>Delete 🗑️</DeleteProduct>
         </RequireSignIn>
       </div>
     </div>

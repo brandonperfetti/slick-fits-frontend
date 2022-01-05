@@ -24,6 +24,7 @@ export default function DeleteProduct({ id, children }) {
   });
   return (
     <button
+      className="p-3 hover:bg-gray-100 sm:text-xs lg:text-lg xl:text-xl"
       type="button"
       disabled={loading}
       onClick={() => {

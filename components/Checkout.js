@@ -3,26 +3,15 @@ import {
   CardElement,
   Elements,
   useElements,
-  useStripe
+  useStripe,
 } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
 import gql from 'graphql-tag';
 import { useRouter } from 'next/dist/client/router';
 import nProgress from 'nprogress';
 import { useState } from 'react';
-import styled from 'styled-components';
 import { useCart } from '../lib/cartState';
-import SickButton from './styles/SickButton';
 import { CURRENT_USER_QUERY } from './User';
-
-const CheckoutFormStyles = styled.form`
-  box-shadow: 0 1px 2px 2px rgba(0, 0, 0, 0.04);
-  border: 1px solid rgba(0, 0, 0, 0.06);
-  border-radius: 5px;
-  padding: 1rem;
-  display: grid;
-  grid-gap: 1rem;
-`;
 
 const CREATE_ORDER_MUTATION = gql`
   mutation CREATE_ORDER_MUTATION($token: String!) {
@@ -58,7 +47,7 @@ function CheckoutForm() {
     // 1. Stop the form from submitting and turn the loader on
     e.preventDefault();
     setLoading(true);
-    console.log('We got work to do...');
+    // console.log('We got work to do...');
 
     // 2. Start the page transition
     nProgress.start();
@@ -101,15 +90,25 @@ function CheckoutForm() {
   }
 
   return (
-    <CheckoutFormStyles onSubmit={handleSubmit}>
+    <form
+      className="border-2 p-4 grid gap-4 rounded-lg shadow-bs"
+      onSubmit={handleSubmit}
+    >
       {error && <p style={{ fontSize: 12, color: 'red' }}>{error.message}</p>}
       {graphQLError && (
         <p style={{ fontSize: 12, color: 'red' }}>{graphQLError.message}</p>
       )}
 
       <CardElement />
-      <SickButton>Check Out</SickButton>
-    </CheckoutFormStyles>
+      <button
+        className="bg-slick text-white font-medium border-0 border-r-0 uppercase text-2xl py-1 px-1 transform -skew-x-2 inline-block transition-all disabled:opacity-50"
+        type="submit"
+        // TODO: Figure out how to disable check out button if no items or cc are present
+        // disabled={!CardElement}
+      >
+        Check Out !
+      </button>
+    </form>
   );
 }
 

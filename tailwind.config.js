@@ -525,6 +525,7 @@ module.exports = {
       10: 'repeat(10, minmax(0, 1fr))',
       11: 'repeat(11, minmax(0, 1fr))',
       12: 'repeat(12, minmax(0, 1fr))',
+      custom: 'auto 1fr auto',
     },
     gridTemplateRows: {
       none: 'none',
@@ -959,6 +960,7 @@ module.exports = {
   variants: {
     extend: {
       scale: ['group-hover'],
+      opacity: ['disabled'],
     },
   },
   variantOrder: [
