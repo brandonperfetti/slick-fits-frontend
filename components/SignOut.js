@@ -15,7 +15,7 @@ export default function SignOut() {
   return (
     <button type="button" onClick={signout}>
       <span className="relative px-4 text-sm uppercase flex-shrink-0 lg:px-6 lg:text-lg xl:px-8 xl:text-xl">
-        <span className="absolute top-0 left-0 w-1 h-full bg-gray-200" />
+        <span className="absolute top-0 left-0 w-0.5 h-full bg-gray-200 transform -skew-x-20" />
         Sign Out!
       </span>
     </button>
