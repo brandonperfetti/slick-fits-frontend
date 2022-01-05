@@ -107,6 +107,7 @@ module.exports = {
       72: '18rem',
       80: '20rem',
       96: '24rem',
+      100: '25rem',
     },
     animation: {
       none: 'none',
@@ -210,7 +211,11 @@ module.exports = {
       8: '8px',
       10: '10px',
     },
+    transitionTimingFunction: {
+      bloop: 'cubic-bezier(1,-0.65,0,2.31)',
+    },
     boxShadow: {
+      bs: '0 12px 24px 0 rgba(0,0,0,0.09)',
       sm: '0 1px 2px 0 rgb(0 0 0 / 0.05)',
       DEFAULT: '0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)',
       md: '0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)',
@@ -654,6 +659,7 @@ module.exports = {
       fit: 'fit-content',
       prose: '65ch',
       ...breakpoints(theme('screens')),
+      1000: '62.5rem',
     }),
     minHeight: {
       0: '0px',
@@ -758,6 +764,7 @@ module.exports = {
       8: '8px',
     },
     rotate: {
+      '-1': '-1deg',
       0: '0deg',
       1: '1deg',
       2: '2deg',
@@ -798,6 +805,7 @@ module.exports = {
     skew: {
       '-20': '-20deg',
       '-7': '-7deg',
+      '-5': '-5deg',
       0: '0deg',
       1: '1deg',
       2: '2deg',
@@ -946,6 +954,11 @@ module.exports = {
       30: '30',
       40: '40',
       50: '50',
+    },
+  },
+  variants: {
+    extend: {
+      scale: ['group-hover'],
     },
   },
   variantOrder: [

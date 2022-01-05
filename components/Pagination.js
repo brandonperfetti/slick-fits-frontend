@@ -22,7 +22,7 @@ export default function Pagination({ page }) {
   const pageCount = Math.ceil(count / perPage);
   return (
     <div
-      className="text-center inline-grid grid-cols-4 items-stretch justify-center	content-center mt-8 mb-auto border"
+      className="p-8 text-center grid-cols-4 gap-3.5 items-stretch justify-center mt-4 mb-auto "
       data-testid="pagination"
     >
       <Head>
@@ -30,16 +30,25 @@ export default function Pagination({ page }) {
           Slick Fits - Page {page} of {pageCount}
         </title>
       </Head>
-      <Link href={`/products/${page - 1}`}>
-        <a aria-disabled={page <= 1}>← Prev</a>
-      </Link>
-      <p>
-        Page {page} of <span data-testid="pageCount">{pageCount}</span>
-      </p>
-      <p>{count} Items Total</p>
-      <Link href={`/products/${page + 1}`}>
-        <a aria-disabled={page >= pageCount}>Next →</a>
-      </Link>
+      <div className=" inline-flex border rounded-lg divide-x">
+        <Link href={`/products/${page - 1}`}>
+          <a className="px-7 py-4 text-gray-500" aria-disabled={page <= 1}>
+            ← Prev
+          </a>
+        </Link>
+        <p className="px-7 py-4 hidden sm:block ">
+          Page {page} of <span data-testid="pageCount">{pageCount}</span>
+        </p>
+        <p className="px-7 py-4 hidden sm:block">{count} Items Total</p>
+        <Link href={`/products/${page + 1}`}>
+          <a
+            className="px-7 py-4 text-gray-500"
+            aria-disabled={page >= pageCount}
+          >
+            Next →
+          </a>
+        </Link>
+      </div>
     </div>
   );
 }

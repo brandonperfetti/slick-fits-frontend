@@ -55,7 +55,7 @@ export default function Page({ children }) {
     <>
       {/* <GlobalStyles /> */}
       <Header />
-      <div className="max-w-max mt-0 mb-auto p-8">{children}</div>
+      <div className="max-w-full mt-0 mb-auto p-8">{children}</div>
     </>
   );
 }

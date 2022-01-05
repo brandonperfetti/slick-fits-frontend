@@ -30,3 +30,9 @@
       Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue';
   }
 }
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 2px 2px 0 rgb(0 0 0 / 10%);
+  }
+}

@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { useCart } from '../lib/cartState';
 import CartCount from './CartCount';
 import SignOut from './SignOut';
-import NavStyles from './styles/NavStyles';
 import { useUser } from './User';
 
 export default function Nav() {
@@ -11,13 +10,14 @@ export default function Nav() {
   return (
     <>
       <button
-        className=" uppercase relative px-4 text-sm lg:px-6 lg:text-lg xl:px-8 xl:text-xl"
+        className=" uppercase relative group px-4 text-sm lg:px-6 lg:text-lg xl:px-8 xl:text-xl"
         type="button"
       >
         <Link href="/products">
           <div>
             <div className="absolute top-0 left-0 w-0.5 h-full bg-gray-200 transform -skew-x-20" />
-            Products
+            <div className="">Products</div>
+            <span className="absolute w-full h-1 bg-slick -bottom-1 left-0 rounded-sm transform scale-x-0 group-hover:scale-x-100 transition ease-bloop duration-400 group-hover:bg-slick" />
           </div>
         </Link>
       </button>
@@ -30,7 +30,8 @@ export default function Nav() {
             <Link href="/sell">
               <div>
                 <div className="absolute top-0 left-0 w-0.5 h-full bg-gray-200 transform -skew-x-20" />
-                Sell
+                <span className="">Sell</span>
+                <span className="absolute w-full h-1 bg-slick -bottom-1 left-0 rounded-sm transform scale-x-0 group-hover:scale-x-100 group-hover:bg-slick" />
               </div>
             </Link>
           </button>
@@ -67,13 +68,14 @@ export default function Nav() {
               <span className="flex items-center space-x-2">
                 <span>My Cart</span>
                 <span className="bg-slick text-white h-8 w-8 rounded-full flex items-center justify-center">
-            <CartCount
-              count={user.cart.reduce(
-                (tally, cartItem) =>
-                  tally + (cartItem.product ? cartItem.quantity : 0),
-                0
-              )}
-            /></span>
+                  <CartCount
+                    count={user.cart.reduce(
+                      (tally, cartItem) =>
+                        tally + (cartItem.product ? cartItem.quantity : 0),
+                      0
+                    )}
+                  />
+                </span>
               </span>
             </div>
           </button>
@@ -81,7 +83,17 @@ export default function Nav() {
       )}
       {!user && (
         <>
-          <Link href="/signin">Sign In</Link>
+          <button
+            className="uppercase relative px-4 text-sm lg:px-6 lg:text-lg xl:px-8 xl:text-xl"
+            type="button"
+          >
+            <Link href="/signin">
+              <div>
+                <div className="absolute top-0 left-0 w-0.5 h-full bg-gray-200 transform -skew-x-20" />
+                Sign In
+              </div>
+            </Link>
+          </button>
         </>
       )}
     </>

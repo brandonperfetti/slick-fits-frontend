@@ -38,11 +38,11 @@ export default function Products({ page }) {
   if (loading) return <p>Loading...</p>;
   if (error) return <p> Error: {error.message}</p>;
   return (
-    <ProductsListStyles>
+    <div className="mt-5 grid lg:grid-cols-2 gap-16 items-center">
       {data.allProducts.map((product) => (
         <Product key={product.id} product={product} />
       ))}
-    </ProductsListStyles>
+    </div>
   );
 }
 Products.propTypes = {
