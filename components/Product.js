@@ -1,11 +1,9 @@
 import Link from 'next/link';
+import { PropTypes } from 'prop-types';
 import formatMoney from '../utils/formatMoney';
 import AddToCart from './AddToCart';
 import DeleteProduct from './DeleteProduct';
 import RequireSignIn from './RequireSignIn';
-import ItemStyles from './styles/ItemStyles';
-import PriceTag from './styles/PriceTag';
-import Title from './styles/Title';
 
 export default function Product({ product }) {
   return (
@@ -49,3 +47,7 @@ export default function Product({ product }) {
     </div>
   );
 }
+
+Product.propTypes = {
+  product: PropTypes.any,
+};

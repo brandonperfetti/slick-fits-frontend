@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { PropTypes } from 'prop-types';
 import { useEffect, useState } from 'react';
 import Cart from './Cart';
 import Search from './Search';
@@ -52,3 +52,7 @@ export default function Header() {
     </header>
   );
 }
+
+ClientOnly.propTypes = {
+  children: PropTypes.any,
+};

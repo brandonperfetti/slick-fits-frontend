@@ -1,7 +1,6 @@
 import { useQuery } from '@apollo/client';
 import gql from 'graphql-tag';
 import { PropTypes } from 'prop-types';
-import styled from 'styled-components';
 import { perPage } from '../config';
 import Product from './Product';
 
@@ -20,12 +19,6 @@ export const ALL_PRODUCTS_QUERY = gql`
       }
     }
   }
-`;
-
-const ProductsListStyles = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 60px;
 `;
 
 export default function Products({ page }) {

@@ -1,8 +1,6 @@
 import { useQuery } from '@apollo/client';
-import ProductsPage from './products';
 import { ALL_PRODUCTS_QUERY } from '../components/Products';
-
-// export default ProductsPage;
+import ProductsPage from './products';
 
 export default function HomePage() {
   const { loading, error, data } = useQuery(ALL_PRODUCTS_QUERY);
@@ -16,5 +14,3 @@ export default function HomePage() {
     </main>
   );
 }
-
-// export { default } from './products';
