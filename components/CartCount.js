@@ -17,5 +17,5 @@ export default function CartCount({ count }) {
   );
 }
 CartCount.propTypes = {
-  count: PropTypes.number,
+  count: PropTypes.any,
 };

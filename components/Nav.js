@@ -90,7 +90,7 @@ export default function Nav() {
             <Link href="/signin">
               <div>
                 <div className="absolute top-0 left-0 w-0.5 h-full bg-gray-200 transform -skew-x-20" />
-                Sign In
+                <span data-testid="signIn">Sign In</span>
               </div>
             </Link>
           </button>
