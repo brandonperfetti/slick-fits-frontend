@@ -2,69 +2,137 @@
 
 exports[`<Nav/> Renders and minimal nav when signed out 1`] = `
 <div>
-  <ul
-    class="NavStyles-sc-11c0d2g-0 jofUXi"
+  <button
+    class=" uppercase relative group px-4 text-sm lg:px-6 lg:text-lg xl:px-8 xl:text-xl"
+    type="button"
   >
-    <a
-      href="/products"
-    >
-      Products
-    </a>
-    <a
-      href="/signin"
-    >
+    <div>
+      <div
+        class="absolute top-0 left-0 w-0.5 h-full bg-gray-200 transform -skew-x-20"
+      />
+      <div
+        class=""
+      >
+        Products
+      </div>
+      <span
+        class="absolute w-full h-1 bg-slick -bottom-1 left-0 rounded-sm transform scale-x-0 group-hover:scale-x-100 transition ease-bloop duration-400 group-hover:bg-slick"
+      />
+    </div>
+  </button>
+  <button
+    class="uppercase relative px-4 text-sm lg:px-6 lg:text-lg xl:px-8 xl:text-xl"
+    type="button"
+  >
+    <div>
+      <div
+        class="absolute top-0 left-0 w-0.5 h-full bg-gray-200 transform -skew-x-20"
+      />
       Sign In
-    </a>
-  </ul>
+    </div>
+  </button>
 </div>
 `;
 
 exports[`<Nav/> renders a full nav when signed in 1`] = `
 <div>
-  <ul
-    class="NavStyles-sc-11c0d2g-0 jofUXi"
+  <button
+    class=" uppercase relative group px-4 text-sm lg:px-6 lg:text-lg xl:px-8 xl:text-xl"
+    type="button"
   >
-    <a
-      href="/products"
-    >
-      Products
-    </a>
-    <a
-      href="/sell"
-    >
-      Sell
-    </a>
-    <a
-      href="/orders"
-    >
-      Orders
-    </a>
-    <a
-      href="/account"
-    >
-      Account
-    </a>
-    <button
-      type="button"
-    >
-      My Cart
-      <span
-        class="CartCount__AnimationStyles-sc-xxvp4g-1 gwXiGr"
+    <div>
+      <div
+        class="absolute top-0 left-0 w-0.5 h-full bg-gray-200 transform -skew-x-20"
+      />
+      <div
+        class=""
       >
-        <div>
-          <div
-            class="CartCount__Dot-sc-xxvp4g-0 iephzA count"
-          >
-            0
-          </div>
-        </div>
+        Products
+      </div>
+      <span
+        class="absolute w-full h-1 bg-slick -bottom-1 left-0 rounded-sm transform scale-x-0 group-hover:scale-x-100 transition ease-bloop duration-400 group-hover:bg-slick"
+      />
+    </div>
+  </button>
+  <button
+    class="uppercase relative px-4 text-sm lg:px-6 lg:text-lg xl:px-8 xl:text-xl"
+    type="button"
+  >
+    <div>
+      <div
+        class="absolute top-0 left-0 w-0.5 h-full bg-gray-200 transform -skew-x-20"
+      />
+      <span
+        class=""
+      >
+        Sell
       </span>
-    </button>
-    <button
-      type="button"
+      <span
+        class="absolute w-full h-1 bg-slick -bottom-1 left-0 rounded-sm transform scale-x-0 group-hover:scale-x-100 group-hover:bg-slick"
+      />
+    </div>
+  </button>
+  <button
+    class="uppercase relative px-4 text-sm lg:px-6 lg:text-lg xl:px-8 xl:text-xl"
+    type="button"
+  >
+    <div>
+      <div
+        class="absolute top-0 left-0 w-0.5 h-full bg-gray-200 transform -skew-x-20"
+      />
+      Orders
+    </div>
+  </button>
+  <button
+    class="uppercase relative px-4 text-sm lg:px-6 lg:text-lg xl:px-8 xl:text-xl"
+    type="button"
+  >
+    <div>
+      <div
+        class="absolute top-0 left-0 w-0.5 h-full bg-gray-200 transform -skew-x-20"
+      />
+      Account
+    </div>
+  </button>
+  <button
+    type="button"
+  >
+    <span
+      class="relative px-4 text-sm uppercase flex-shrink-0 lg:px-6 lg:text-lg xl:px-8 xl:text-xl"
     >
+      <span
+        class="absolute top-0 left-0 w-0.5 h-full bg-gray-200 transform -skew-x-20"
+      />
       Sign Out!
-    </button>
-  </ul>
+    </span>
+  </button>
+  <button
+    class="relative h-7 uppercase text-sm lg:px-6 lg:text-lg xl:px-8 xl:text-xl flex items-center"
+    type="button"
+  >
+    <div>
+      <div
+        class="absolute top-0 left-0 w-0.5 h-full bg-gray-200 transform -skew-x-20"
+      />
+      <span
+        class="flex items-center space-x-2"
+      >
+        <span>
+          My Cart
+        </span>
+        <span
+          class="bg-slick text-white h-8 w-8 rounded-full flex items-center justify-center"
+        >
+          <div>
+            <div
+              class="count"
+            >
+              0
+            </div>
+          </div>
+        </span>
+      </span>
+    </div>
+  </button>
 </div>
 `;

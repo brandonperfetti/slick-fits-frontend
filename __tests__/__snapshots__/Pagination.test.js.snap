@@ -3,35 +3,45 @@
 exports[`<Pagination/> renders pagination for 18 items 1`] = `
 <div>
   <div
-    class="PaginationStyles-sc-aduuar-0 iPSNxs"
+    class="p-8 text-center grid-cols-4 gap-3.5 items-stretch justify-center mt-4 mb-auto "
     data-testid="pagination"
   >
-    <a
-      aria-disabled="true"
-      href="/products/0"
+    <div
+      class=" inline-flex border rounded-lg divide-x"
     >
-      ← Prev
-    </a>
-    <p>
-      Page 
-      1
-       of 
-      <span
-        data-testid="pageCount"
+      <a
+        aria-disabled="true"
+        class="px-7 py-4 text-gray-500"
+        href="/products/0"
       >
-        9
-      </span>
-    </p>
-    <p>
-      18
-       Items Total
-    </p>
-    <a
-      aria-disabled="false"
-      href="/products/2"
-    >
-      Next →
-    </a>
+        ← Prev
+      </a>
+      <p
+        class="px-7 py-4 hidden sm:block "
+      >
+        Page 
+        1
+         of 
+        <span
+          data-testid="pageCount"
+        >
+          9
+        </span>
+      </p>
+      <p
+        class="px-7 py-4 hidden sm:block"
+      >
+        18
+         Items Total
+      </p>
+      <a
+        aria-disabled="false"
+        class="px-7 py-4 text-gray-500"
+        href="/products/2"
+      >
+        Next →
+      </a>
+    </div>
   </div>
 </div>
 `;

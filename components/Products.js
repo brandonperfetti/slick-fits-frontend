@@ -31,7 +31,7 @@ export default function Products({ page }) {
   if (loading) return <p>Loading...</p>;
   if (error) return <p> Error: {error.message}</p>;
   return (
-    <div className="mt-5 grid lg:grid-cols-2 gap-16 items-center">
+    <div className="mt-5 lg:px-10 xl:px-96 grid lg:grid-cols-2 gap-16 items-center">
       {data.allProducts.map((product) => (
         <Product key={product.id} product={product} />
       ))}

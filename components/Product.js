@@ -7,7 +7,7 @@ import RequireSignIn from './RequireSignIn';
 
 export default function Product({ product }) {
   return (
-    <div className="w-auto max-w-5xl bg-white border-2 relative shadow-bs m-auto">
+    <div className="w-auto min-w-full max-w-5xl bg-white border-2 relative shadow-bs m-auto">
       <img
         className="w-full h-100 object-cover"
         src={product?.photo?.image?.publicUrlTransformed}
@@ -18,7 +18,7 @@ export default function Product({ product }) {
           <Link href={`/product/${product.id}`}>{product.name}</Link>
         </div>
       </h3>
-      <span className="bg-slick shadow-bs flex flex-col transform rotate-3 text-white font-semibold p-2 leading-none text-3xl absolute -top-1 -right-1">
+      <span className="bg-slick shadow-bs flex flex-col transform rotate-3 text-white font-semibold p-2 leading-none xl:text-3xl absolute -top-1 -right-1">
         {formatMoney(product.price)}
       </span>
       <p className="py-4 px-8 leading-8 flex-1">{product.description}</p>
@@ -33,14 +33,20 @@ export default function Product({ product }) {
                 },
               }}
             >
-              Edit ✏️
+              <span className="xs:text-xs sm:text-sm lg:text-lg xl:text-xl">
+                Edit ✏️
+              </span>
             </Link>
           </button>
           <button className="p-3 hover:bg-gray-100" type="button">
-            <AddToCart id={product.id} />
+            <span className="sm:text-xs lg:text-lg xl:text-xl">
+              <AddToCart id={product.id} />
+            </span>
           </button>
           <button className="p-3 hover:bg-gray-100" type="button">
-            <DeleteProduct id={product.id}>Delete</DeleteProduct>
+            <span className="sm:text-xs lg:text-lg xl:text-xl">
+              <DeleteProduct id={product.id}>Delete 🗑️</DeleteProduct>
+            </span>
           </button>
         </RequireSignIn>
       </div>

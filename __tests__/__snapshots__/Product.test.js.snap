@@ -3,31 +3,38 @@
 exports[`<Product/> Renders and matches the snapshot 1`] = `
 <div>
   <div
-    class="ItemStyles-sc-16pk14u-0 fAcGEr"
+    class="w-auto min-w-full max-w-5xl bg-white border-2 relative shadow-bs m-auto"
   >
     <img
       alt="dogs are best"
+      class="w-full h-100 object-cover"
       src="dog.jpg"
     />
     <h3
-      class="Title-sc-16nq74k-0 fPQljb"
+      class="-mt-8 mb-4 text-white text-center transform -skew-x-5 -rotate-1"
     >
-      <a
-        href="/product/abc123"
+      <div
+        class="bg-slick max-w-;g mx-auto inline leading-tight text-shadow text-4.5xl text-center	pt-0 pb-2 px-3"
       >
-        dogs are best
-      </a>
+        <a
+          href="/product/abc123"
+        >
+          dogs are best
+        </a>
+      </div>
     </h3>
     <span
-      class="PriceTag-sc-nwbk6t-0 ffUdgI"
+      class="bg-slick shadow-bs flex flex-col transform rotate-3 text-white font-semibold p-2 leading-none xl:text-3xl absolute -top-1 -right-1"
     >
       $50
     </span>
-    <p>
+    <p
+      class="py-4 px-8 leading-8 flex-1"
+    >
       dogs
     </p>
     <div
-      class="buttonList"
+      class="grid grid-cols-3 border-t border-gray-300 divide-x divide-gray-300"
     />
   </div>
 </div>
