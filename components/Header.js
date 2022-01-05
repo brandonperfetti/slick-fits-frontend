@@ -49,19 +49,21 @@ function ClientOnly({ children, ...delegated }) {
 
 export default function Header() {
   return (
-    <HeaderStyles>
-      <div className="bar">
-        <Logo>
+    <header className="mb-8 min-w-full">
+      <div className="px-6 border-b-8 border-black flex flex-col items-center xl:flex-row xl:items-stretch">
+        <h1 className="my-6 bg-slick text-white inline-block p-2 uppercase text-4.5xl transform -skew-x-7">
           <Link href="/">Slick fits</Link>
-        </Logo>
-        <Nav />
+        </h1>
+        <nav className="mt-4 flex-1 flex flex-wrap justify-center items-center xl:mt-0 xl:justify-end">
+          <Nav />
+        </nav>
       </div>
-      <div className="sub-bar">
+      <div className="">
         <ClientOnly>
           <Search />
         </ClientOnly>
       </div>
       <Cart />
-    </HeaderStyles>
+    </header>
   );
 }

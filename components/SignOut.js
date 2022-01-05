@@ -14,7 +14,10 @@ export default function SignOut() {
   });
   return (
     <button type="button" onClick={signout}>
-      Sign Out!
+      <span className="relative px-4 text-sm uppercase flex-shrink-0 lg:px-6 lg:text-lg xl:px-8 xl:text-xl">
+        <span className="absolute top-0 left-0 w-1 h-full bg-gray-200" />
+        Sign Out!
+      </span>
     </button>
   );
 }

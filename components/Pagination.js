@@ -21,7 +21,10 @@ export default function Pagination({ page }) {
   const { count } = data._allProductsMeta;
   const pageCount = Math.ceil(count / perPage);
   return (
-    <PaginationStyles data-testid="pagination">
+    <div
+      className="text-center inline-grid grid-cols-4 items-stretch justify-center	content-center mt-8 mb-auto border"
+      data-testid="pagination"
+    >
       <Head>
         <title>
           Slick Fits - Page {page} of {pageCount}
@@ -37,6 +40,6 @@ export default function Pagination({ page }) {
       <Link href={`/products/${page + 1}`}>
         <a aria-disabled={page >= pageCount}>Next →</a>
       </Link>
-    </PaginationStyles>
+    </div>
   );
 }

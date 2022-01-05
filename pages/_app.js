@@ -4,7 +4,9 @@ import Router from 'next/router';
 import Page from '../components/Page';
 import '../components/styles/nprogress.css';
 import withData from '../lib/withData';
+import '../css/tailwind.css';
 import { CartStateProvider } from '../lib/cartState';
+import NewHeader from '../components/NewHeader';
 
 Router.events.on('routeChangeStart', () => NProgress.start());
 Router.events.on('routeChangeComplete', () => NProgress.done());
@@ -15,6 +17,7 @@ function MyApp({ Component, pageProps, apollo }) {
   return (
     <ApolloProvider client={apollo}>
       <CartStateProvider>
+        {/* <NewHeader /> */}
         <Page>
           <Component {...pageProps} />
         </Page>
