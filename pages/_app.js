@@ -2,6 +2,7 @@ import { ApolloProvider } from '@apollo/client';
 import Router from 'next/router';
 import NProgress from 'nprogress';
 import { PropTypes } from 'prop-types';
+import Header from '../components/Header';
 import Page from '../components/Page';
 import '../components/styles/nprogress.css';
 import '../css/tailwind.css';
@@ -17,7 +18,7 @@ function MyApp({ Component, pageProps, apollo }) {
   return (
     <ApolloProvider client={apollo}>
       <CartStateProvider>
-        {/* <NewHeader /> */}
+        <Header />
         <Page>
           <Component {...pageProps} />
         </Page>

@@ -4,7 +4,7 @@ import Header from './Header';
 export default function Page({ children }) {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <div className="max-w-full mt-0 mb-auto p-8">{children}</div>
     </>
   );

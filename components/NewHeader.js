@@ -4,10 +4,10 @@ import Cart from './Cart';
 import Search from './Search';
 
 const links = [
-  { name: 'Products', target: '/' },
-  { name: 'Sell', target: '/' },
-  { name: 'Orders', target: '/' },
-  { name: 'Account', target: '/' },
+  { name: 'Products', target: '/products' },
+  { name: 'Sell', target: '/sell' },
+  { name: 'Orders', target: '/orders' },
+  { name: 'Account', target: '/account' },
   { name: 'Sign Out', target: '/' },
   { name: 'My Cart', target: '/' },
 ];
@@ -23,7 +23,7 @@ function ClientOnly({ children, ...delegated }) {
   return <div {...delegated}>{children}</div>;
 }
 
-export default function Header() {
+export default function NewHeader() {
   return (
     <header className="mb-8">
       <div className="px-6 border-b-8 border-black flex flex-col items-center xl:flex-row">

@@ -25,9 +25,9 @@ export default function Header() {
             <span className="hover:underline">Slick fits</span>
           </Link>
         </h1>
-        <nav className="my-4 flex-1 flex flex-wrap justify-center items-center xl:my-0 xl:justify-end">
+        <div className="my-4 flex-1 flex flex-wrap justify-center items-center xl:my-0 xl:justify-end">
           <Nav />
-        </nav>
+        </div>
       </div>
       <div>
         <ClientOnly>

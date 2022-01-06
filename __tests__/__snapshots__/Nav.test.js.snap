@@ -10,11 +10,7 @@ exports[`<Nav/> Renders and minimal nav when signed out 1`] = `
       <div
         class="absolute top-0 left-0 w-0.5 h-full bg-gray-200 transform -skew-x-20"
       />
-      <div
-        class=""
-      >
-        Products
-      </div>
+      Products
       <span
         class="absolute w-full h-1 bg-slick -bottom-1 left-0 rounded-sm transform scale-x-0 group-hover:scale-x-100 transition ease-bloop duration-400 group-hover:bg-slick"
       />
@@ -48,36 +44,30 @@ exports[`<Nav/> renders a full nav when signed in 1`] = `
       <div
         class="absolute top-0 left-0 w-0.5 h-full bg-gray-200 transform -skew-x-20"
       />
-      <div
-        class=""
-      >
+      <span>
         Products
-      </div>
-      <span
-        class="absolute w-full h-1 bg-slick -bottom-1 left-0 rounded-sm transform scale-x-0 group-hover:scale-x-100 transition ease-bloop duration-400 group-hover:bg-slick"
-      />
+        <span
+          class="absolute w-full h-1 bg-slick -bottom-1 left-0 rounded-sm transform scale-x-0 group-hover:scale-x-100 transition ease-bloop duration-400 group-hover:bg-slick"
+        />
+      </span>
     </div>
   </button>
   <button
-    class="uppercase relative px-4 text-sm lg:px-6 lg:text-lg xl:px-8 xl:text-xl"
+    class=" uppercase relative group px-4 text-sm lg:px-6 lg:text-lg xl:px-8 xl:text-xl"
     type="button"
   >
     <div>
       <div
         class="absolute top-0 left-0 w-0.5 h-full bg-gray-200 transform -skew-x-20"
       />
+      sell
       <span
-        class=""
-      >
-        Sell
-      </span>
-      <span
-        class="absolute w-full h-1 bg-slick -bottom-1 left-0 rounded-sm transform scale-x-0 group-hover:scale-x-100 group-hover:bg-slick"
+        class="absolute w-full h-1 bg-slick -bottom-1 left-0 rounded-sm transform scale-x-0 group-hover:scale-x-100 transition ease-bloop duration-400 group-hover:bg-slick"
       />
     </div>
   </button>
   <button
-    class="uppercase relative px-4 text-sm lg:px-6 lg:text-lg xl:px-8 xl:text-xl"
+    class=" uppercase relative group px-4 text-sm lg:px-6 lg:text-lg xl:px-8 xl:text-xl"
     type="button"
   >
     <div>
@@ -85,10 +75,13 @@ exports[`<Nav/> renders a full nav when signed in 1`] = `
         class="absolute top-0 left-0 w-0.5 h-full bg-gray-200 transform -skew-x-20"
       />
       Orders
+      <span
+        class="absolute w-full h-1 bg-slick -bottom-1 left-0 rounded-sm transform scale-x-0 group-hover:scale-x-100 transition ease-bloop duration-400 group-hover:bg-slick"
+      />
     </div>
   </button>
   <button
-    class="uppercase relative px-4 text-sm lg:px-6 lg:text-lg xl:px-8 xl:text-xl"
+    class=" uppercase relative group px-4 text-sm lg:px-6 lg:text-lg xl:px-8 xl:text-xl"
     type="button"
   >
     <div>
@@ -96,22 +89,13 @@ exports[`<Nav/> renders a full nav when signed in 1`] = `
         class="absolute top-0 left-0 w-0.5 h-full bg-gray-200 transform -skew-x-20"
       />
       Account
+      <span
+        class="absolute w-full h-1 bg-slick -bottom-1 left-0 rounded-sm transform scale-x-0 group-hover:scale-x-100 transition ease-bloop duration-400 group-hover:bg-slick"
+      />
     </div>
   </button>
   <button
-    type="button"
-  >
-    <span
-      class="relative px-4 text-sm uppercase flex-shrink-0 lg:px-6 lg:text-lg xl:px-8 xl:text-xl"
-    >
-      <span
-        class="absolute top-0 left-0 w-0.5 h-full bg-gray-200 transform -skew-x-20"
-      />
-      Sign Out!
-    </span>
-  </button>
-  <button
-    class="relative h-7 uppercase text-sm lg:px-6 lg:text-lg xl:px-8 xl:text-xl flex items-center"
+    class=" uppercase relative group px-4 text-sm lg:px-6 lg:text-lg xl:px-8 xl:text-xl"
     type="button"
   >
     <div>
@@ -123,6 +107,9 @@ exports[`<Nav/> renders a full nav when signed in 1`] = `
       >
         <span>
           My Cart
+          <span
+            class="absolute w-full h-1 bg-slick -bottom-1 left-0 rounded-sm transform scale-x-0 group-hover:scale-x-100 transition ease-bloop duration-400 group-hover:bg-slick"
+          />
         </span>
         <span
           class="bg-slick text-white h-8 w-8 rounded-full flex items-center justify-center"
@@ -135,6 +122,21 @@ exports[`<Nav/> renders a full nav when signed in 1`] = `
             </div>
           </div>
         </span>
+      </span>
+    </div>
+  </button>
+  <button
+    class="relative h-7 uppercase text-sm lg:px-6 lg:text-lg xl:px-8 xl:text-xl flex items-center"
+    type="button"
+  >
+    <div>
+      <div
+        class="absolute top-0 left-0 w-0.5 h-full bg-gray-200 transform -skew-x-20"
+      />
+      <span
+        class="hover:text-slick"
+      >
+        Sign Out!
       </span>
     </div>
   </button>
