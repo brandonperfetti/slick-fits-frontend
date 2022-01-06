@@ -525,6 +525,7 @@ module.exports = {
       12: 'repeat(12, minmax(0, 1fr))',
       'cart-item': 'auto 1fr auto',
       'order-meta': 'repeat(auto-fit, minmax(20px, 1fr))',
+      'sign-in': 'repeat(auto-fit, minmax(300px, 1fr))',
     },
     gridTemplateRows: {
       none: 'none',
