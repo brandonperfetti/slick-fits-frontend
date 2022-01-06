@@ -7,6 +7,7 @@ module.exports = {
   darkMode: 'media', // or 'class'
   theme: {
     screens: {
+      xs: '375px',
       sm: '640px',
       md: '768px',
       lg: '1024px',
@@ -210,9 +211,6 @@ module.exports = {
       4: '4px',
       8: '8px',
       10: '10px',
-    },
-    transitionTimingFunction: {
-      bloop: 'cubic-bezier(1,-0.65,0,2.31)',
     },
     boxShadow: {
       bs: '0 12px 24px 0 rgba(0,0,0,0.09)',
@@ -895,6 +893,7 @@ module.exports = {
       in: 'cubic-bezier(0.4, 0, 1, 1)',
       out: 'cubic-bezier(0, 0, 0.2, 1)',
       'in-out': 'cubic-bezier(0.4, 0, 0.2, 1)',
+      bloop: 'cubic-bezier(1,-0.65,0,2.31)',
     },
     translate: ({ theme }) => ({
       ...theme('spacing'),

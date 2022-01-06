@@ -27,7 +27,7 @@ export default function RemoveFromCart({ id }) {
   });
   return (
     <button
-      className="text-5xl bg-none border-0 hover:text-slick"
+      className="text-5xl bg-none border-0 hover:text-slick xs:text-sm sm:text-sm md:text-md lg:text-lg xl:text-xl xxl:text-2xl"
       onClick={removeFromCart}
       disabled={loading}
       type="button"

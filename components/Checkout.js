@@ -101,7 +101,7 @@ function CheckoutForm() {
 
       <CardElement />
       <button
-        className="bg-slick text-white font-medium border-0 border-r-0 uppercase text-2xl py-1 px-1 transform -skew-x-2 inline-block transition-all disabled:opacity-50"
+        className="bg-slick text-white font-medium border-0 border-r-0 uppercase text-2xl py-1 px-1 transform -skew-x-2 inline-block transition-all disabled:opacity-50 xs:text-xs sm:text-sm md:text-md lg:text-lg xl:text-xl 2xl:text-2xl"
         type="submit"
         // TODO: Figure out how to disable check out button if no items or cc are present
         // disabled={!CardElement}
