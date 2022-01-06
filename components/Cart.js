@@ -11,7 +11,7 @@ function CartItem({ cartItem }) {
   const { product } = cartItem;
   if (!product) return null;
   return (
-    <li className="h-fit py-4 px-2 border-b-2 border-black grid grid-cols-custom hover:bg-gray-100 xs:text-xs sm:text-sm md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">
+    <li className="h-fit py-4 px-2 border-b-2 border-black grid grid-cols-custom hover:bg-gray-100 xs:text-xs sm:text-sm md:text-md lg:text-lg xl:text-xl 2xl:text-xl">
       <img
         className="mr-4"
         width="100"
