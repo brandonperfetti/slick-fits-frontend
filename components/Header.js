@@ -1,40 +1,9 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import styled from 'styled-components';
+import { PropTypes } from 'prop-types';
 import Cart from './Cart';
 import Nav from './Nav';
 import Search from './Search';
-
-const Logo = styled.h1`
-  font-size: 4rem;
-  margin-left: 2rem;
-  position: relative;
-  z-index: 2;
-  background: red;
-  transform: skew(-7deg);
-  a {
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-    padding: 0.5rem 1rem;
-  }
-`;
-
-const HeaderStyles = styled.header`
-  .bar {
-    border-bottom: 10px solid var(--black, black);
-    display: grid;
-    grid-template-columns: auto 1fr;
-    justify-content: space-between;
-    align-items: stretch;
-  }
-
-  .sub-bar {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    border-bottom: 1px solid var(--black, black);
-  }
-`;
 
 function ClientOnly({ children, ...delegated }) {
   const [hasMounted, setHasMounted] = useState(false);
@@ -49,19 +18,27 @@ function ClientOnly({ children, ...delegated }) {
 
 export default function Header() {
   return (
-    <HeaderStyles>
-      <div className="bar">
-        <Logo>
-          <Link href="/">Slick fits</Link>
-        </Logo>
-        <Nav />
+    <header className="mb-8 min-w-full border-b border-black">
+      <div className="xs:px-0 md:px-0 xl:px-6 2xl:px-6 border-b-10 border-black flex flex-col items-center xl:flex-row xl:items-stretch">
+        <h1 className="my-7 bg-slick text-white inline-block p-2 uppercase text-4.5xl transform -skew-x-7">
+          <Link href="/">
+            <span className="hover:underline">Slick fits</span>
+          </Link>
+        </h1>
+        <div className="my-4 flex-1 flex flex-wrap justify-center items-center xl:my-0 xl:justify-end">
+          <Nav />
+        </div>
       </div>
-      <div className="sub-bar">
+      <div>
         <ClientOnly>
           <Search />
         </ClientOnly>
       </div>
       <Cart />
-    </HeaderStyles>
+    </header>
   );
 }
+
+ClientOnly.propTypes = {
+  children: PropTypes.any,
+};

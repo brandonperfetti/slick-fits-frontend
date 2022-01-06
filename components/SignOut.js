@@ -13,8 +13,17 @@ export default function SignOut() {
     refetchQueries: [{ query: CURRENT_USER_QUERY }],
   });
   return (
-    <button type="button" onClick={signout}>
-      Sign Out!
-    </button>
+    <>
+      <button
+        className="relative h-7 uppercase text-sm lg:px-6 lg:text-lg xl:px-8 xl:text-xl flex items-center"
+        type="button"
+        onClick={signout}
+      >
+        <div>
+          <div className="absolute top-0 left-0 w-0.5 h-full bg-gray-200 transform -skew-x-20" />
+          <span className="hover:text-slick">Sign Out!</span>
+        </div>
+      </button>
+    </>
   );
 }

@@ -1,16 +1,6 @@
 import { useMutation } from '@apollo/client';
 import gql from 'graphql-tag';
-import styled from 'styled-components';
-
-const BigButton = styled.button`
-  font-size: 3rem;
-  background: none;
-  border: 0;
-  &:hover {
-    color: var(--red);
-    cursor: pointer;
-  }
-`;
+import { PropTypes } from 'prop-types';
 
 const REMOVE_FROM_CART_MUTATION = gql`
   mutation REMOVE_FROM_CART_MUTATION($id: ID!) {
@@ -36,13 +26,17 @@ export default function RemoveFromCart({ id }) {
     // },
   });
   return (
-    <BigButton
+    <button
+      className="text-5xl bg-none border-0 hover:text-slick xs:text-sm sm:text-sm md:text-md lg:text-lg xl:text-xl 2xl:text-5xl"
       onClick={removeFromCart}
       disabled={loading}
       type="button"
       title="Remove This Item from Cart"
     >
       &times;
-    </BigButton>
+    </button>
   );
 }
+RemoveFromCart.propTypes = {
+  id: PropTypes.string,
+};

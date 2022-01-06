@@ -1,5 +1,6 @@
 import { useMutation } from '@apollo/client';
 import gql from 'graphql-tag';
+import { PropTypes } from 'prop-types';
 import { CURRENT_USER_QUERY } from './User';
 
 const ADD_TO_CART_MUTATION = gql`
@@ -16,8 +17,17 @@ export default function AddToCart({ id }) {
     refetchQueries: [{ query: CURRENT_USER_QUERY }],
   });
   return (
-    <button disabled={loading} type="button" onClick={addToCart}>
+    <button
+      className="p-3 hover:bg-gray-100 sm:text-xs lg:text-lg xl:text-xl"
+      disabled={loading}
+      type="button"
+      onClick={addToCart}
+    >
       Add {loading && 'ing'}to Cart 🛍️
     </button>
   );
 }
+
+AddToCart.propTypes = {
+  id: PropTypes.string,
+};

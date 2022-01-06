@@ -1,5 +1,6 @@
 import { useMutation } from '@apollo/client';
 import gql from 'graphql-tag';
+import { PropTypes } from 'prop-types';
 
 const DELETE_PRODUCT_MUTATION = gql`
   mutation DELETE_PRODUCT_MUTATION($id: ID!) {
@@ -23,10 +24,11 @@ export default function DeleteProduct({ id, children }) {
   });
   return (
     <button
+      className="p-3 hover:bg-gray-100 sm:text-xs lg:text-lg xl:text-xl"
       type="button"
       disabled={loading}
       onClick={() => {
-        if (confirm('Are you sure you want to delete this item?')) {
+        if (window.confirm('Are you sure you want to delete this item?')) {
           // go ahead and delete the item
           console.log('DELETE');
           deleteProduct().catch((err) => alert(err.message));
@@ -37,3 +39,7 @@ export default function DeleteProduct({ id, children }) {
     </button>
   );
 }
+DeleteProduct.propTypes = {
+  id: PropTypes.string,
+  children: PropTypes.any,
+};
