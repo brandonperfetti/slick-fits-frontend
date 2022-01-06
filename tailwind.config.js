@@ -523,7 +523,8 @@ module.exports = {
       10: 'repeat(10, minmax(0, 1fr))',
       11: 'repeat(11, minmax(0, 1fr))',
       12: 'repeat(12, minmax(0, 1fr))',
-      custom: 'auto 1fr auto',
+      'cart-item': 'auto 1fr auto',
+      'order-meta': 'repeat(auto-fit, minmax(20px, 1fr))',
     },
     gridTemplateRows: {
       none: 'none',

@@ -32,11 +32,11 @@ const USER_ORDERS_QUERY = gql`
   }
 `;
 
-const OrderUl = styled.ul`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  grid-gap: 4rem;
-`;
+// const OrderUl = styled.ul`
+//   display: grid;
+//   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+//   grid-gap: 4rem;
+// `;
 
 function countItemsInAnOrder(order) {
   return order.items.reduce((tally, item) => tally + item.quantity, 0);
@@ -48,27 +48,35 @@ export default function OrdersPage() {
   if (error) return <ErrorMessage error={error} />;
   const { allOrders } = data;
   return (
-    <div>
+    <div className="xs:px-1 xs:text-xs md:text-md lg:text-lg overflow-auto 2xl:px-100">
       <Head>
         <title>Your Orders ({allOrders.length})</title>
       </Head>
-      <h2>You have {allOrders.length} orders!</h2>
-      <OrderUl>
+      <h2 className="border-b-2 border-slick mt-0 mb-8 pb-8 ">
+        You have {allOrders.length} orders!
+      </h2>
+      <ul className="grid xs:grid-cols-1 xl:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 gap-16">
         {allOrders.map((order) => (
-          <OrderItemStyles>
+          <li className="shadow-bs list-none p-8 border-2 border-slate-200">
             <Link href={`/order/${order.id}`}>
               <a>
-                <div className="order-meta">
-                  <p>{countItemsInAnOrder(order)} Items</p>
-                  <p>
+                <p className="bg-slate-100 mb-4 p-4">ID: {order.id}</p>
+                <div className="grid grid-cols-3 gap-4 text-center">
+                  <p className="bg-slate-100 m-0 p-4">
+                    {countItemsInAnOrder(order)} Items
+                  </p>
+                  <p className="bg-slate-100 m-0 p-4">
                     {order.items.length} Product
                     {order.items.length === 1 ? '' : 's'}
                   </p>
-                  <p>{formatMoney(order.total)}</p>
+                  <p className="bg-slate-100 m-0 p-4">
+                    {formatMoney(order.total)}
+                  </p>
                 </div>
-                <div className="images">
+                <div className="grid gap-3 grid-cols-order-meta mt-4">
                   {order.items.map((item) => (
                     <img
+                      className="h-48 w-full object-cover max-w-lg"
                       key={`image-${item.id}`}
                       src={item.photo?.image?.publicUrlTransformed}
                       alt={item.name}
@@ -77,9 +85,9 @@ export default function OrdersPage() {
                 </div>
               </a>
             </Link>
-          </OrderItemStyles>
+          </li>
         ))}
-      </OrderUl>
+      </ul>
     </div>
   );
 }
