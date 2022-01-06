@@ -30,7 +30,7 @@ export default function Pagination({ page }) {
           Slick Fits - Page {page} of {pageCount}
         </title>
       </Head>
-      <div className=" inline-flex border rounded-lg divide-x">
+      <div className=" inline-flex border rounded-lg divide-x xs:text-xs sm:text-sm md:text-md lg:text-lg xl:text-xl 2xl:text-xl">
         <Link href={`/products/${page - 1}`}>
           <a className="px-7 py-4 text-gray-500" aria-disabled={page <= 1}>
             ← Prev

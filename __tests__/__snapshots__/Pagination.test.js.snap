@@ -7,7 +7,7 @@ exports[`<Pagination/> renders pagination for 18 items 1`] = `
     data-testid="pagination"
   >
     <div
-      class=" inline-flex border rounded-lg divide-x"
+      class=" inline-flex border rounded-lg divide-x xs:text-xs sm:text-sm md:text-md lg:text-lg xl:text-xl 2xl:text-xl"
     >
       <a
         aria-disabled="true"
