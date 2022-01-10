@@ -1,8 +1,6 @@
-import gql from 'graphql-tag';
 import { useMutation } from '@apollo/client';
-import Form from './styles/Form';
+import gql from 'graphql-tag';
 import useForm from '../utils/useForm';
-import { CURRENT_USER_QUERY } from './User';
 import DisplayError from './ErrorMessage';
 
 const PASSWORD_RESET_MUTATION = gql`
@@ -36,15 +34,23 @@ export default function PasswordReset() {
     // Send the email and password to the gql api
   }
   return (
-    <Form method="POST" onSubmit={handleSubmit}>
-      <h2>Forgot Password?</h2>
-      <fieldset>
+    <form
+      className=" shadow-bs bg-gray-100 border-4 border-white p-5 text-base leading-6 font-semibold"
+      method="POST"
+      onSubmit={handleSubmit}
+    >
+      <h2 className="text-2xl">
+        Forgot Password?
+        <div className="my-2 bg-gradient-to-r from-slick to-amber-400 h-3 mb-4" />
+      </h2>
+      <fieldset className="border-0 p-0">
         {data?.sendUserPasswordResetLink === null && (
           <p>Success! Check your email for a link.</p>
         )}
-        <label htmlFor="email">
+        <label className="block mb-4 text-xl" htmlFor="email">
           Email
           <input
+            className="w-full my-2 p-3 text-sm border-2 border-slate-900"
             type="email"
             name="email"
             placeholder="Your Email Address"
@@ -54,8 +60,13 @@ export default function PasswordReset() {
           />
         </label>
         <DisplayError error={error} />
-        <button type="submit">Reset</button>
+        <button
+          className="rounded-xl w-fit bg-slick text-white border-0 text-2xl font-semibold px-4 py-4"
+          type="submit"
+        >
+          Reset
+        </button>
       </fieldset>
-    </Form>
+    </form>
   );
 }
