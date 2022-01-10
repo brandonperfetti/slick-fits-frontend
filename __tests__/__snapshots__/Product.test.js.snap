@@ -7,7 +7,7 @@ exports[`<Product/> Renders and matches the snapshot 1`] = `
   >
     <img
       alt="dogs are best"
-      class="w-full h-100 object-cover"
+      class="w-full md:max-h-36 lg:max-h-48 xl:max-h-48 2xl:max-h-100 object-cover"
       src="dog.jpg"
     />
     <h3

@@ -47,7 +47,8 @@ export default function CreateProduct() {
     }
   );
   return (
-    <Form
+    <form
+      className=" shadow-bs bg-gray-100 border-4 border-white p-5 text-base leading-6 font-semibold"
       onSubmit={async (e) => {
         e.preventDefault();
         // Submit the input fields to the backend
@@ -59,11 +60,15 @@ export default function CreateProduct() {
         });
       }}
     >
-      <DisplayError error={error} />
-      <fieldset disabled={loading} aria-busy={loading}>
-        <label htmlFor="image">
+      <h2 className="text-2xl">
+        Add a Product{' '}
+        <div className="my-2 bg-gradient-to-r from-slick to-amber-400 h-3 mb-4" />
+      </h2>
+      <fieldset className="border-0 p-0" disabled={loading} aria-busy={loading}>
+        <label className="block mb-4 text-xl" htmlFor="image">
           Image
           <input
+            className="w-full rounded-xl my-2 p-3 text-sm border-2 border-slate-600"
             required
             type="file"
             id="image"
@@ -71,31 +76,34 @@ export default function CreateProduct() {
             onChange={handleChange}
           />
         </label>
-        <label htmlFor="name">
+        <label className="block mb-4 text-xl" htmlFor="name">
           Name
           <input
+            className="w-full rounded-xl my-2 p-3 text-sm border-2 border-slate-600"
             type="text"
             id="name"
             name="name"
-            placeholder="name"
+            placeholder=" Product Name"
             value={inputs.name}
             onChange={handleChange}
           />
         </label>
-        <label htmlFor="price">
+        <label className="block mb-4 text-xl" htmlFor="price">
           Price
           <input
+            className="w-full rounded-xl my-2 p-3 text-sm border-2 border-slate-600"
             type="number"
             id="price"
             name="price"
-            placeholder="price"
+            placeholder="Price"
             value={inputs.price}
             onChange={handleChange}
           />
         </label>
-        <label htmlFor="description">
+        <label className="block mb-4 text-xl" htmlFor="description">
           Description
           <textarea
+            className="w-full rounded-xl my-2 p-3 text-sm border-2 border-slate-600"
             type="text"
             id="description"
             name="description"
@@ -104,10 +112,16 @@ export default function CreateProduct() {
             onChange={handleChange}
           />
         </label>
+        <DisplayError error={error} />
 
-        <button type="submit">+ Add Product</button>
+        <button
+          className="rounded-xl w-fit bg-slick text-white border-0 text-lg font-semibold p-4"
+          type="submit"
+        >
+          + Add Product
+        </button>
       </fieldset>
-    </Form>
+    </form>
   );
 }
 export { CREATE_PRODUCT_MUTATION };

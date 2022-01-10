@@ -3,16 +3,28 @@
 exports[`<CreateProduct/> renders and matches snapshot 1`] = `
 <div>
   <form
-    class="Form-sc-1xszr8q-0 hVEEdl"
+    class=" shadow-bs bg-gray-100 border-4 border-white p-5 text-base leading-6 font-semibold"
   >
+    <h2
+      class="text-2xl"
+    >
+      Add a Product
+       
+      <div
+        class="my-2 bg-gradient-to-r from-slick to-amber-400 h-3 mb-4"
+      />
+    </h2>
     <fieldset
       aria-busy="false"
+      class="border-0 p-0"
     >
       <label
+        class="block mb-4 text-xl"
         for="image"
       >
         Image
         <input
+          class="w-full rounded-xl my-2 p-3 text-sm border-2 border-slate-600"
           id="image"
           name="image"
           required=""
@@ -20,34 +32,40 @@ exports[`<CreateProduct/> renders and matches snapshot 1`] = `
         />
       </label>
       <label
+        class="block mb-4 text-xl"
         for="name"
       >
         Name
         <input
+          class="w-full rounded-xl my-2 p-3 text-sm border-2 border-slate-600"
           id="name"
           name="name"
-          placeholder="name"
+          placeholder=" Product Name"
           type="text"
           value=""
         />
       </label>
       <label
+        class="block mb-4 text-xl"
         for="price"
       >
         Price
         <input
+          class="w-full rounded-xl my-2 p-3 text-sm border-2 border-slate-600"
           id="price"
           name="price"
-          placeholder="price"
+          placeholder="Price"
           type="number"
           value="0"
         />
       </label>
       <label
+        class="block mb-4 text-xl"
         for="description"
       >
         Description
         <textarea
+          class="w-full rounded-xl my-2 p-3 text-sm border-2 border-slate-600"
           id="description"
           name="description"
           placeholder="Description"
@@ -55,6 +73,7 @@ exports[`<CreateProduct/> renders and matches snapshot 1`] = `
         />
       </label>
       <button
+        class="rounded-xl w-fit bg-slick text-white border-0 text-lg font-semibold p-4"
         type="submit"
       >
         + Add Product
