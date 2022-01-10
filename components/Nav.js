@@ -118,6 +118,34 @@ export default function Nav() {
               </div>
             </Link>
           </button>
+          <button
+            className=" uppercase relative group px-4 text-sm lg:px-6 lg:text-lg xl:px-8 xl:text-xl"
+            type="button"
+          >
+            <Link href="/signup">
+              <div>
+                <div className="absolute top-0 left-0 w-0.5 h-full bg-gray-200 transform -skew-x-20" />
+                {/* <div className=""> */}
+                Sign Up
+                <span className="absolute w-full h-1 bg-slick -bottom-1 left-0 rounded-sm transform scale-x-0 group-hover:scale-x-100 transition ease-bloop duration-400 group-hover:bg-slick" />
+                {/* </div> */}
+              </div>
+            </Link>
+          </button>
+          <button
+            className=" uppercase relative group px-4 text-sm lg:px-6 lg:text-lg xl:px-8 xl:text-xl"
+            type="button"
+          >
+            <Link href="/reset">
+              <div>
+                <div className="absolute top-0 left-0 w-0.5 h-full bg-gray-200 transform -skew-x-20" />
+                {/* <div className=""> */}
+                Forgot Password?
+                <span className="absolute w-full h-1 bg-slick -bottom-1 left-0 rounded-sm transform scale-x-0 group-hover:scale-x-100 transition ease-bloop duration-400 group-hover:bg-slick" />
+                {/* </div> */}
+              </div>
+            </Link>
+          </button>
         </>
       )}
     </>

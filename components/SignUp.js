@@ -48,20 +48,15 @@ export default function SignUp() {
         <div className="my-2 bg-gradient-to-r from-slick to-amber-400 h-3 mb-4" />
       </h2>
       <fieldset className="border-0 p-0">
-        {data?.createUser && (
-          <p>
-            Signed up with {data.createUser.email} - Please go ahead and sign
-            in!
-          </p>
-        )}
         <label className="block mb-4 text-xl" htmlFor="name">
           Name
           <input
-            className="w-full my-2 p-3 text-sm border-2 border-slate-900"
+            className="w-full rounded-xl my-2 p-3 text-sm border-2 border-slate-600"
             type="name"
             name="name"
             placeholder="Your Name"
             autoComplete="name"
+            required
             value={inputs.name}
             onChange={handleChange}
           />
@@ -69,11 +64,12 @@ export default function SignUp() {
         <label className="block mb-4 text-xl" htmlFor="email">
           Email
           <input
-            className="w-full my-2 p-3 text-sm border-2 border-slate-900"
+            className="w-full rounded-xl my-2 p-3 text-sm border-2 border-slate-600"
             type="email"
             name="email"
             placeholder="Your Email Address"
             autoComplete="email"
+            required
             value={inputs.email}
             onChange={handleChange}
           />
@@ -81,16 +77,25 @@ export default function SignUp() {
         <label className="block mb-4 text-xl" htmlFor="password">
           Password
           <input
-            className="w-full my-2 p-3 text-sm border-2 border-slate-900"
+            className="w-full rounded-xl my-2 p-3 text-sm border-2 border-slate-600"
             type="password"
             name="password"
             placeholder="Password"
             autoComplete="password"
+            required
             value={inputs.password}
             onChange={handleChange}
           />
         </label>
         <DisplayError error={error} />
+        {data?.createUser && (
+          <div className="p-4 bg-green-200 opacity-60 rounded-xl my-4">
+            <p>
+              Signed up with {data.createUser.email} - Please go ahead and sign
+              in!
+            </p>
+          </div>
+        )}
         <button
           className="rounded-xl w-fit bg-slick text-white border-0 text-2xl font-semibold px-4 py-4"
           type="submit"

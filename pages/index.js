@@ -9,7 +9,7 @@ export default function HomePage() {
   if (error) return `Error! ${error.message}`;
 
   return (
-    <main className="max-w-full mx-auto p-6 mb-4">
+    <main className="max-w-full mx-auto p-6 mb-4 ">
       <ProductsPage />
     </main>
   );
