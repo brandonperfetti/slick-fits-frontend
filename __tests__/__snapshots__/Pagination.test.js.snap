@@ -3,7 +3,7 @@
 exports[`<Pagination/> renders pagination for 18 items 1`] = `
 <div>
   <div
-    class="p-4 text-center grid-cols-4 gap-3.5 items-stretch justify-center mt-4 mb-auto "
+    class="p-4 text-center grid-cols-4 gap-3.5 items-stretch justify-center mb-auto "
     data-testid="pagination"
   >
     <div
