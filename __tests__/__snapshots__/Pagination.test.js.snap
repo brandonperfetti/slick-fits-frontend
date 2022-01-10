@@ -3,11 +3,11 @@
 exports[`<Pagination/> renders pagination for 18 items 1`] = `
 <div>
   <div
-    class="p-8 text-center grid-cols-4 gap-3.5 items-stretch justify-center mt-4 mb-auto "
+    class="p-4 text-center grid-cols-4 gap-3.5 items-stretch justify-center mt-4 mb-auto "
     data-testid="pagination"
   >
     <div
-      class=" inline-flex border rounded-lg divide-x xs:text-xs sm:text-sm md:text-md lg:text-lg xl:text-xl 2xl:text-xl"
+      class=" inline-flex border rounded-lg divide-x xs:text-xs sm:text-sm md:text-md lg:text-lg xl:text-sm 2xl:text-xl"
     >
       <a
         aria-disabled="true"

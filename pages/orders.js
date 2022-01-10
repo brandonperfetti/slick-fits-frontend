@@ -47,7 +47,7 @@ export default function OrdersPage() {
       <h2 className="border-b-2 border-slick mt-0 mb-8 pb-8 ">
         You have {allOrders.length} orders!
       </h2>
-      <ul className="grid xs:grid-cols-1 xl:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 gap-16">
+      <ul className="grid xs:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 gap-16">
         {allOrders.map((order) => (
           <li className="shadow-bs list-none p-8 border-2 border-slate-200">
             <Link href={`/order/${order.id}`}>

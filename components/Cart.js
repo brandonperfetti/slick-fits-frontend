@@ -39,13 +39,13 @@ export default function Cart() {
   return (
     <div className="min-w-full">
       <CartStyles open={cartOpen}>
-        <header className="h-full border-b-4 border-black pt-2 mb-2 pb-6">
+        <header className="h-full min-w-full border-b-4 border-black mb-2 pb-4">
           <div className=" grid xs:text-xs sm:text-xl md:text-1.5xl lg:text-2.5xl xl:text-3.5xl 2xl:text-4xl">
-            <h3 className="bg-slick h-max w-fit text-white inline-block py-8 px-6 transform -skew-x-3 m-0 leading-10">
+            <h3 className="bg-slick text-white inline-block p-3 uppercase text-3.5xl transform -skew-x-7 mr-12">
               {me.name}'s Cart
             </h3>
             <button
-              className="bg-black text-white text-4.5xl border-0 absolute p-2 z-10 justify-self-end transform -skew-x-3 hover:text-slick leading-10"
+              className="bg-black text-white text-4xl border-0 absolute p-1 z-10 justify-self-end -skew-x-7 hover:text-slick leading-10"
               type="button"
               onClick={closeCart}
             >

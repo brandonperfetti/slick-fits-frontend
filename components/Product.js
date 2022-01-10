@@ -9,7 +9,7 @@ export default function Product({ product }) {
   return (
     <div className="w-auto min-w-full max-w-5xl bg-white border-2 relative shadow-bs m-auto">
       <img
-        className="w-full h-100 object-cover"
+        className="w-full md:max-h-36 lg:max-h-48 xl:max-h-48 2xl:max-h-100 object-cover"
         src={product?.photo?.image?.publicUrlTransformed}
         alt={product.name}
       />

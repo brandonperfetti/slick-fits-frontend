@@ -17,9 +17,9 @@ function ClientOnly({ children, ...delegated }) {
 
 export default function Header() {
   return (
-    <header className="mb-8 min-w-full border-b border-black">
+    <header className="min-w-full border-b border-black">
       <div className="xs:px-0 md:px-0 xl:px-6 2xl:px-6 border-b-10 border-black flex flex-col items-center xl:flex-row xl:items-stretch">
-        <h1 className="my-7 bg-slick text-white inline-block p-2 uppercase text-4.5xl transform -skew-x-7">
+        <h1 className="my-3 bg-slick text-white inline-block p-2 uppercase text-3.5xl transform -skew-x-7">
           <Link href="/">
             <span className="hover:underline">Slick fits</span>
           </Link>

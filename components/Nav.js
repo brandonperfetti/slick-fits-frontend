@@ -12,7 +12,7 @@ export default function Nav() {
       {user && (
         <>
           <button
-            className=" uppercase relative group px-4 text-sm lg:px-6 lg:text-lg xl:px-8 xl:text-xl"
+            className=" uppercase relative group px-4 text-sm lg:px-6 lg:text-lg xl:px-8 xl:text-lg"
             type="button"
           >
             <Link href="/products">
@@ -26,7 +26,7 @@ export default function Nav() {
             </Link>
           </button>
           <button
-            className=" uppercase relative group px-4 text-sm lg:px-6 lg:text-lg xl:px-8 xl:text-xl"
+            className=" uppercase relative group px-4 text-sm lg:px-6 lg:text-lg xl:px-8 xl:text-lg"
             type="button"
           >
             <Link href="/sell">
@@ -38,7 +38,7 @@ export default function Nav() {
             </Link>
           </button>
           <button
-            className=" uppercase relative group px-4 text-sm lg:px-6 lg:text-lg xl:px-8 xl:text-xl"
+            className=" uppercase relative group px-4 text-sm lg:px-6 lg:text-lg xl:px-8 xl:text-lg"
             type="button"
           >
             <Link href="/orders">
@@ -50,7 +50,7 @@ export default function Nav() {
             </Link>
           </button>
           <button
-            className=" uppercase relative group px-4 text-sm lg:px-6 lg:text-lg xl:px-8 xl:text-xl"
+            className=" uppercase relative group px-4 text-sm lg:px-6 lg:text-lg xl:px-8 xl:text-lg"
             type="button"
           >
             <Link href="/account">
@@ -62,7 +62,7 @@ export default function Nav() {
             </Link>
           </button>
           <button
-            className=" uppercase relative group px-4 text-sm lg:px-6 lg:text-lg xl:px-8 xl:text-xl"
+            className=" uppercase relative group px-4 text-sm lg:px-6 lg:text-lg xl:px-8 xl:text-lg"
             type="button"
             onClick={openCart}
           >
@@ -91,7 +91,7 @@ export default function Nav() {
       {!user && (
         <>
           <button
-            className=" uppercase relative group px-4 text-sm lg:px-6 lg:text-lg xl:px-8 xl:text-xl"
+            className=" uppercase relative group px-4 text-sm lg:px-6 lg:text-lg xl:px-8 xl:text-lg"
             type="button"
           >
             <Link href="/products">
@@ -105,7 +105,7 @@ export default function Nav() {
             </Link>
           </button>
           <button
-            className=" uppercase relative group px-4 text-sm lg:px-6 lg:text-lg xl:px-8 xl:text-xl"
+            className=" uppercase relative group px-4 text-sm lg:px-6 lg:text-lg xl:px-8 xl:text-lg"
             type="button"
           >
             <Link href="/signin">
@@ -119,7 +119,7 @@ export default function Nav() {
             </Link>
           </button>
           <button
-            className=" uppercase relative group px-4 text-sm lg:px-6 lg:text-lg xl:px-8 xl:text-xl"
+            className=" uppercase relative group px-4 text-sm lg:px-6 lg:text-lg xl:px-8 xl:text-lg"
             type="button"
           >
             <Link href="/signup">
@@ -133,7 +133,7 @@ export default function Nav() {
             </Link>
           </button>
           <button
-            className=" uppercase relative group px-4 text-sm lg:px-6 lg:text-lg xl:px-8 xl:text-xl"
+            className=" uppercase relative group px-4 text-sm lg:px-6 lg:text-lg xl:px-8 xl:text-lg"
             type="button"
           >
             <Link href="/reset">
