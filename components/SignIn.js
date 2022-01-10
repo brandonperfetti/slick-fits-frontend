@@ -2,7 +2,6 @@ import { useMutation } from '@apollo/client';
 import gql from 'graphql-tag';
 import useForm from '../utils/useForm';
 import DisplayError from './ErrorMessage';
-import Form from './styles/Form';
 import { CURRENT_USER_QUERY } from './User';
 
 const SIGN_IN_MUTATION = gql`
@@ -47,12 +46,21 @@ export default function SignIn() {
       ? data?.authenticateUserWithPassword
       : undefined;
   return (
-    <Form method="POST" onSubmit={handleSubmit}>
-      <h2>Sign In</h2>
-      <fieldset>
-        <label htmlFor="email">
+    <form
+      className=" shadow-bs bg-gray-100 border-4 border-white p-5 text-base leading-6 font-semibold"
+      method="POST"
+      onSubmit={handleSubmit}
+    >
+      <h2 className="text-2xl">
+        Sign In{' '}
+        <div className="my-2 bg-gradient-to-r from-slick to-amber-400 h-3 mb-4" />
+      </h2>
+
+      <fieldset className="border-0 p-0">
+        <label className="block mb-4 text-xl" htmlFor="email">
           Email
           <input
+            className="w-full my-2 p-3 text-sm border-2 border-slate-900"
             type="email"
             name="email"
             placeholder="Your Email Address"
@@ -61,9 +69,10 @@ export default function SignIn() {
             onChange={handleChange}
           />
         </label>
-        <label htmlFor="password">
+        <label className="block mb-4 text-xl" htmlFor="password">
           Password
           <input
+            className="w-full my-2 p-3 text-sm border-2 border-slate-900"
             type="password"
             name="password"
             placeholder="Password"
@@ -73,8 +82,13 @@ export default function SignIn() {
           />
         </label>
         <DisplayError error={error} />
-        <button type="submit">Sign In!</button>
+        <button
+          className="rounded-xl w-fit bg-slick text-white border-0 text-2xl font-semibold p-4"
+          type="submit"
+        >
+          Sign In!
+        </button>
       </fieldset>
-    </Form>
+    </form>
   );
 }

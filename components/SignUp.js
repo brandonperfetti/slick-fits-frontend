@@ -2,7 +2,6 @@ import { useMutation } from '@apollo/client';
 import gql from 'graphql-tag';
 import useForm from '../utils/useForm';
 import DisplayError from './ErrorMessage';
-import Form from './styles/Form';
 
 const SIGN_UP_MUTATION = gql`
   mutation SIGN_UP_MUTATION(
@@ -39,18 +38,26 @@ export default function SignUp() {
     // Send the email and password to the gql api
   }
   return (
-    <Form method="POST" onSubmit={handleSubmit}>
-      <h2>Sign Up</h2>
-      <fieldset>
+    <form
+      className=" shadow-bs bg-gray-100 border-4 border-white p-5 text-base leading-6 font-semibold"
+      method="POST"
+      onSubmit={handleSubmit}
+    >
+      <h2 className="text-2xl">
+        Sign Up
+        <div className="my-2 bg-gradient-to-r from-slick to-amber-400 h-3 mb-4" />
+      </h2>
+      <fieldset className="border-0 p-0">
         {data?.createUser && (
           <p>
             Signed up with {data.createUser.email} - Please go ahead and sign
             in!
           </p>
         )}
-        <label htmlFor="name">
+        <label className="block mb-4 text-xl" htmlFor="name">
           Name
           <input
+            className="w-full my-2 p-3 text-sm border-2 border-slate-900"
             type="name"
             name="name"
             placeholder="Your Name"
@@ -59,9 +66,10 @@ export default function SignUp() {
             onChange={handleChange}
           />
         </label>
-        <label htmlFor="email">
+        <label className="block mb-4 text-xl" htmlFor="email">
           Email
           <input
+            className="w-full my-2 p-3 text-sm border-2 border-slate-900"
             type="email"
             name="email"
             placeholder="Your Email Address"
@@ -70,9 +78,10 @@ export default function SignUp() {
             onChange={handleChange}
           />
         </label>
-        <label htmlFor="password">
+        <label className="block mb-4 text-xl" htmlFor="password">
           Password
           <input
+            className="w-full my-2 p-3 text-sm border-2 border-slate-900"
             type="password"
             name="password"
             placeholder="Password"
@@ -82,9 +91,14 @@ export default function SignUp() {
           />
         </label>
         <DisplayError error={error} />
-        <button type="submit">Sign Up!</button>
+        <button
+          className="rounded-xl w-fit bg-slick text-white border-0 text-2xl font-semibold px-4 py-4"
+          type="submit"
+        >
+          Sign Up!
+        </button>
       </fieldset>
-    </Form>
+    </form>
   );
 }
 
