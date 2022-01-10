@@ -2,6 +2,7 @@ import { useQuery } from '@apollo/client';
 import gql from 'graphql-tag';
 import Head from 'next/head';
 import styled from 'styled-components';
+import { PropTypes } from 'prop-types';
 import formatMoney from '../utils/formatMoney';
 import DisplayError from './ErrorMessage';
 
@@ -69,3 +70,7 @@ export default function SingleProduct({ id }) {
 }
 
 export { SINGLE_ITEM_QUERY };
+
+SingleProduct.propTypes = {
+  id: PropTypes.string,
+};
