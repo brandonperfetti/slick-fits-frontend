@@ -3,7 +3,6 @@ import { resetIdCounter, useCombobox } from 'downshift';
 import gql from 'graphql-tag';
 import debounce from 'lodash.debounce';
 import { useRouter } from 'next/dist/client/router';
-import { DropDown, DropDownItem, SearchStyles } from './styles/DropDown';
 
 const SEARCH_PRODUCTS_QUERY = gql`
   query SEARCH_PRODUCTS_QUERY($searchTerm: String!) {
@@ -62,37 +61,41 @@ export default function Search() {
     itemToString: (item) => item?.name || '',
   });
   return (
-    <SearchStyles>
-      <div {...getComboboxProps()}>
+    <>
+      <div className="w-full text-base" {...getComboboxProps()}>
         <input
+          className="p-2 border-2 rounded-lg"
           {...getInputProps({
             type: 'search',
             placeholder: 'Search for an Item',
             id: 'search',
-            className: loading ? 'loading' : null,
+            // className: loading ? 'loading' : null,
           })}
         />
+        <div {...getMenuProps()}>
+          {isOpen &&
+            items.map((item, index) => (
+              <div
+                className=" flex border-b-2 border-gray-200 hover:border-l-8 hover:bg-gray-100:bg-gray-100 selection::bg-gray-100 p-4 hover:pl-8 transition-all text-base"
+                {...getItemProps({ item, index })}
+                key={item.id}
+                highlighted={index === highlightedIndex}
+              >
+                <img
+                  className="mr-2 max-h-8"
+                  src={item.photo.image.publicUrlTransformed}
+                  alt={item.name}
+                />
+                {item.name}
+              </div>
+            ))}
+          {isOpen && !items.length && !loading && (
+            <div className="flex border-b-2 border-gray-200 p-4 transition-all text-base">
+              Sorry, No items found for {inputValue}
+            </div>
+          )}
+        </div>
       </div>
-      <DropDown {...getMenuProps()}>
-        {isOpen &&
-          items.map((item, index) => (
-            <DropDownItem
-              {...getItemProps({ item, index })}
-              key={item.id}
-              highlighted={index === highlightedIndex}
-            >
-              <img
-                src={item.photo.image.publicUrlTransformed}
-                alt={item.name}
-                width="50"
-              />
-              {item.name}
-            </DropDownItem>
-          ))}
-        {isOpen && !items.length && !loading && (
-          <DropDownItem>Sorry, No items found for {inputValue}</DropDownItem>
-        )}
-      </DropDown>
-    </SearchStyles>
+    </>
   );
 }
