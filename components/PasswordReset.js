@@ -44,22 +44,26 @@ export default function PasswordReset() {
         <div className="my-2 bg-gradient-to-r from-slick to-amber-400 h-3 mb-4" />
       </h2>
       <fieldset className="border-0 p-0">
-        {data?.sendUserPasswordResetLink === null && (
-          <p>Success! Check your email for a link.</p>
-        )}
         <label className="block mb-4 text-xl" htmlFor="email">
           Email
           <input
-            className="w-full my-2 p-3 text-sm border-2 border-slate-900"
+            className="w-full rounded-xl my-2 p-3 text-sm border-2 border-slate-600"
             type="email"
             name="email"
             placeholder="Your Email Address"
+            required
             autoComplete="email"
             value={inputs.email}
             onChange={handleChange}
           />
         </label>
         <DisplayError error={error} />
+
+        {data?.sendUserPasswordResetLink === null && (
+          <div className="p-4 bg-green-200 opacity-60 rounded-xl my-4">
+            <p>Success! Check your email for a link.</p>
+          </div>
+        )}
         <button
           className="rounded-xl w-fit bg-slick text-white border-0 text-2xl font-semibold px-4 py-4"
           type="submit"

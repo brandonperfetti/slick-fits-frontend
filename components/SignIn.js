@@ -60,7 +60,7 @@ export default function SignIn() {
         <label className="block mb-4 text-xl" htmlFor="email">
           Email
           <input
-            className="w-full my-2 p-3 text-sm border-2 border-slate-900"
+            className="w-full rounded-xl my-2 p-3 text-sm border-2 border-slate-600"
             type="email"
             name="email"
             placeholder="Your Email Address"
@@ -72,7 +72,7 @@ export default function SignIn() {
         <label className="block mb-4 text-xl" htmlFor="password">
           Password
           <input
-            className="w-full my-2 p-3 text-sm border-2 border-slate-900"
+            className="w-full rounded-xl my-2 p-3 text-sm border-2 border-slate-600"
             type="password"
             name="password"
             placeholder="Password"

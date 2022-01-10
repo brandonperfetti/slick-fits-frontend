@@ -1,9 +1,8 @@
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
 import { PropTypes } from 'prop-types';
+import { useEffect, useState } from 'react';
 import Cart from './Cart';
 import Nav from './Nav';
-import Search from './Search';
 
 function ClientOnly({ children, ...delegated }) {
   const [hasMounted, setHasMounted] = useState(false);
@@ -28,11 +27,6 @@ export default function Header() {
         <div className="my-4 flex-1 flex flex-wrap justify-center items-center xl:my-0 xl:justify-end">
           <Nav />
         </div>
-      </div>
-      <div>
-        <ClientOnly>
-          <Search />
-        </ClientOnly>
       </div>
       <Cart />
     </header>

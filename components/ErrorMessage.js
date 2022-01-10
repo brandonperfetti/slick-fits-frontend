@@ -25,21 +25,21 @@ const DisplayError = ({ error }) => {
     error.networkError.result.errors.length
   ) {
     return error.networkError.result.errors.map((error, i) => (
-      <ErrorStyles key={i}>
+      <div className="p-4 bg-red-200 opacity-60 rounded-xl my-4" key={i}>
         <p data-testid="graphql-error">
           <strong>Shoot!</strong>
           {error.message.replace('GraphQL error: ', '')}
         </p>
-      </ErrorStyles>
+      </div>
     ));
   }
   return (
-    <ErrorStyles>
+    <div className="p-4 bg-red-200 opacity-60 rounded-xl my-4">
       <p data-testid="graphql-error">
-        <strong>Shoot!</strong>
+        <span>Shoot! </span>
         {error.message.replace('GraphQL error: ', '')}
       </p>
-    </ErrorStyles>
+    </div>
   );
 };
 

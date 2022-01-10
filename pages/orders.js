@@ -2,9 +2,7 @@ import { useQuery } from '@apollo/client';
 import gql from 'graphql-tag';
 import Head from 'next/head';
 import Link from 'next/link';
-import styled from 'styled-components';
 import ErrorMessage from '../components/ErrorMessage';
-import OrderItemStyles from '../components/styles/OrderItemStyles';
 import formatMoney from '../utils/formatMoney';
 
 const USER_ORDERS_QUERY = gql`
@@ -31,12 +29,6 @@ const USER_ORDERS_QUERY = gql`
     }
   }
 `;
-
-// const OrderUl = styled.ul`
-//   display: grid;
-//   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-//   grid-gap: 4rem;
-// `;
 
 function countItemsInAnOrder(order) {
   return order.items.reduce((tally, item) => tally + item.quantity, 0);
